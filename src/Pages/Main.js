@@ -36,8 +36,9 @@ class Main extends React.Component {
 
     return (
       <main>
-        {dataBeasts.map((beast) => (
+        {dataBeasts.map((beast, index) => (
           <HornedBeast
+            key={index}
             title={beast.title}
             description={beast.description}
             imageUrl={beast.image_url}
