@@ -1,13 +1,12 @@
-// A comment so I can forge a PR
-import React from "react";
+import { Component } from "react";
 
-import Header from "./Pages/Header";
-import Main from "./Pages/Main";
-import Footer from "./Pages/Footer";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
 
 import "./App.css";
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <>
