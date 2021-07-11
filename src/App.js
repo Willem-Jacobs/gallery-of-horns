@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import Header from './Pages/Header';
-import Main from './Pages/Main';
-import Footer from './Pages/Footer';
+import Header from "./Pages/Header";
+import Main from "./Pages/Main";
+import Footer from "./Pages/Footer";
 
-import './App.css';
+import "./App.css";
 
 class App extends React.Component {
   render() {
@@ -14,7 +14,7 @@ class App extends React.Component {
         <Main />
         <Footer />
       </>
-    )
+    );
   }
 }
 

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import './Header.css'
+import "./Header.css";
 
 class Header extends React.Component {
   render() {
@@ -8,7 +8,7 @@ class Header extends React.Component {
       <header>
         <h1>Horned Beasts</h1>
       </header>
-    )
+    );
   }
 }
 
