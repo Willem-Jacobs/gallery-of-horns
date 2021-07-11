@@ -1,0 +1,9 @@
+footer {
+  background: salmon;
+  height: 100px;
+}
+
+footer h3 {
+  margin-top: 0;
+  line-height: 100px;
+}
