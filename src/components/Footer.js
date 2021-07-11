@@ -1,14 +1,14 @@
-import React from 'react';
+import { Component } from "react";
 
-import './Footer.css'
+import "./Footer.css";
 
-class Footer extends React.Component {
+class Footer extends Component {
   render() {
     return (
       <footer>
         <h3>Willem (Will) Jacobs</h3>
       </footer>
-    )
+    );
   }
 }
 
