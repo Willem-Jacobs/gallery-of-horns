@@ -14,7 +14,6 @@ class Main extends Component {
             title={beast.title}
             description={beast.description}
             imageUrl={beast.image_url}
-            horns={beast.horns}
           />
         ))}
       </main>
