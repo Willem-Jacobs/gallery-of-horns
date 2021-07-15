@@ -1,6 +1,7 @@
 header {
   background: salmon;
   height: 100px;
+  text-align: center;
 }
 
 header h1 {
