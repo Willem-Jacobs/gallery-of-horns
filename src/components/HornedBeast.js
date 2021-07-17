@@ -23,7 +23,7 @@ class HornedBeast extends Component {
           <Card.Img
             variant="top"
             src={this.props.imageUrl}
-            onClick={this.favoriteClickHandler}
+            onClick={this.props.showModal}
           />
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
@@ -32,6 +32,7 @@ class HornedBeast extends Component {
               <i
                 className="bi-suit-heart ml-2"
                 style={{ fontSize: "2rem", color: "red" }}
+                onClick={this.favoriteClickHandler}
               >
                 {this.state.favoriteCounter ? this.state.favoriteCounter : ""}
               </i>
