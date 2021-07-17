@@ -7,20 +7,20 @@ import "./Main.css";
 
 class Main extends Component {
   render() {
+    const beastItem = this.props.dataBeasts.map((beast, index) => (
+      <HornedBeast
+        key={index}
+        title={beast.title}
+        description={beast.description}
+        imageUrl={beast.image_url}
+        showModal={() => this.props.showModal(beast)}
+      />
+    ));
+
     return (
       <main>
         <Container fluid="sm" className="pb-5">
-          <Row className="g-4">
-            {this.props.dataBeasts.map((beast, index) => (
-              <HornedBeast
-                key={index}
-                title={beast.title}
-                description={beast.description}
-                imageUrl={beast.image_url}
-                showModal={() => this.props.showModal(beast)}
-              />
-            ))}
-          </Row>
+          <Row className="g-4">{beastItem}</Row>
         </Container>
       </main>
     );

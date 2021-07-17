@@ -1,6 +1,7 @@
 import { Component } from "react";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+import Badge from "react-bootstrap/Badge";
 
 import "./HornedBeast.css";
 
@@ -34,7 +35,9 @@ class HornedBeast extends Component {
                 style={{ fontSize: "2rem", color: "red" }}
                 onClick={this.favoriteClickHandler}
               >
-                {this.state.favoriteCounter ? this.state.favoriteCounter : ""}
+                <Badge className="ml-2" pill variant="info">
+                  {this.state.favoriteCounter ? this.state.favoriteCounter : ""}
+                </Badge>
               </i>
             </Card.Text>
           </Card.Body>

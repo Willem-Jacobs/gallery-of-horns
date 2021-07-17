@@ -11,11 +11,11 @@ import SelectedBeast from "./components/SelectedBeast";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { showModal: false };
+    this.state = { showModal: false, dataBeast: {} };
   }
 
   showModal = (data) => {
-    this.setState({ showModal: true });
+    this.setState({ showModal: true, dataBeast: data });
   };
 
   hideModal = () => {
@@ -25,7 +25,11 @@ class App extends Component {
   render() {
     return (
       <>
-        <SelectedBeast show={this.state.showModal} onHide={this.hideModal} />
+        <SelectedBeast
+          show={this.state.showModal}
+          onHide={this.hideModal}
+          dataBeast={this.state.dataBeast}
+        />
         <Header />
         <Main dataBeasts={dataBeasts} showModal={this.showModal} />
         <Footer />
