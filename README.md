@@ -7,6 +7,9 @@
 - Site to show data of some horned beasts.
 - Stretch goal completed using the supplid data and mapping over the data array to render.
 - Added styling to each component using element selectors as className or modules not discussed yet in class.
+- Favorite by clicking on heart.
+- More detail in modal by clicking on image.
+- Search on title to display only searched items.
 
 ## LAB-02
 
@@ -41,3 +44,28 @@ Start time:
 Finished time:
 Actual time needed to complete:
 Note: Not done at this time. I need sleep.
+
+## LAB-03
+
+- Moved data file usage from main.js to app.js.
+- Changed favorite by clicking on heart to increase counter.
+- Changed clicking on image to open a modal.
+- Added modal logic and layout to SelectedBeast.js.
+- Refactor main.js to make JSX lean.
+- Refactor HornedBeast.js to use grid and card better.
+- Added state for modal and for selected beast and its functions needed to app.js.
+- Created selectedBeast.js
+
+Number and name of feature: #1 - Display a Modal
+Estimate of time needed to complete: 2 hours.
+Start time: Various started on Friday night.
+Finished time: 1600 (4:00pm)
+Actual time needed to complete: 3 hours
+Note: Did various improvements and changes to the app that is included in this timeframe.
+
+Number and name of feature: Stretch Goal - Fuzzy Search
+Estimate of time needed to complete: 1 hour
+Start time: 1500 (3:00pm)
+Finished time: 1730 (5:30pm)
+Actual time needed to complete: 2.5 hours
+Note: Ran into some issues with state and updating so the process took longer to search.

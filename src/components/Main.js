@@ -19,8 +19,10 @@ class Main extends Component {
 
     return (
       <main>
-        <Container fluid="sm" className="pb-5">
-          <Row className="g-4">{beastItem}</Row>
+        <Container>
+          <Row xs={1} sm={1} md={2} className="pt-3 pb-3">
+            {beastItem}
+          </Row>
         </Container>
       </main>
     );

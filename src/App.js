@@ -7,11 +7,12 @@ import dataBeasts from "./data.json";
 
 import "./App.css";
 import SelectedBeast from "./components/SelectedBeast";
+import Search from "./components/Search";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { showModal: false, dataBeast: {} };
+    this.state = { showModal: false, dataBeast: {}, searchString: "" };
   }
 
   showModal = (data) => {
@@ -22,7 +23,24 @@ class App extends Component {
     this.setState({ showModal: false });
   };
 
+  searchHandler = (event) => {
+    this.setState({ searchString: event.target.value });
+  };
+
+  searchClearHandler = () => {
+    this.setState({ searchString: "" });
+  };
+
   render() {
+    const dataSet = dataBeasts.filter((beast) =>
+      beast.title.toLowerCase().includes(this.state.searchString.toLowerCase())
+    );
+
+    let dataOutput = <h3 className="text-center">No Horned Beasts Found</h3>;
+    if (dataSet.length > 0) {
+      dataOutput = <Main dataBeasts={dataSet} showModal={this.showModal} />;
+    }
+
     return (
       <>
         <SelectedBeast
@@ -31,7 +49,12 @@ class App extends Component {
           dataBeast={this.state.dataBeast}
         />
         <Header />
-        <Main dataBeasts={dataBeasts} showModal={this.showModal} />
+        <Search
+          onChange={this.searchHandler}
+          clearSearch={this.searchClearHandler}
+          searchString={this.state.searchString}
+        />
+        {dataOutput}
         <Footer />
       </>
     );
