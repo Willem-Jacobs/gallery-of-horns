@@ -1,6 +1,7 @@
 import { Component } from "react";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+import Badge from "react-bootstrap/Badge";
 
 import "./HornedBeast.css";
 
@@ -18,12 +19,12 @@ class HornedBeast extends Component {
 
   render() {
     return (
-      <Col>
-        <Card className="" style={{ width: "25rem", height: "30rem" }}>
+      <Col className="pt-3">
+        <Card className="p-1" style={{ width: "33rem", height: "33rem" }}>
           <Card.Img
             variant="top"
             src={this.props.imageUrl}
-            onClick={this.favoriteClickHandler}
+            onClick={this.props.showModal}
           />
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
@@ -32,8 +33,11 @@ class HornedBeast extends Component {
               <i
                 className="bi-suit-heart ml-2"
                 style={{ fontSize: "2rem", color: "red" }}
+                onClick={this.favoriteClickHandler}
               >
-                {this.state.favoriteCounter ? this.state.favoriteCounter : ""}
+                <Badge className="ml-2" pill variant="info">
+                  {this.state.favoriteCounter ? this.state.favoriteCounter : ""}
+                </Badge>
               </i>
             </Card.Text>
           </Card.Body>
