@@ -4,8 +4,6 @@ import FormControl from "react-bootstrap/FormControl";
 
 class Search extends Component {
   render() {
-    const searchClear = () => {};
-
     return (
       <InputGroup
         className="pt-3 pb-3 m-auto"
