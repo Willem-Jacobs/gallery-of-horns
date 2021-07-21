@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 
 import HornedBeast from "./HornedBeast";
+import HornsFilter from "./HornsFilter";
 import "./Main.css";
 
 class Main extends Component {
@@ -20,6 +21,7 @@ class Main extends Component {
     return (
       <main>
         <Container>
+          <HornsFilter />
           <Row xs={1} sm={1} md={2} className="pt-3 pb-3">
             {beastItem}
           </Row>
