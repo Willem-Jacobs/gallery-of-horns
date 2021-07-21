@@ -21,7 +21,7 @@ class Main extends Component {
     return (
       <main>
         <Container>
-          <HornsFilter />
+          <HornsFilter hornSelectHandler={this.props.hornSelectHandler} />
           <Row xs={1} sm={1} md={2} className="pt-3 pb-3">
             {beastItem}
           </Row>
