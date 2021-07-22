@@ -16,12 +16,14 @@ class App extends Component {
       showModal: false,
       dataBeast: {},
       searchString: "",
-      filterHorns: "all",
     };
   }
 
   showModal = (data) => {
-    this.setState({ showModal: true, dataBeast: data });
+    this.setState({
+      showModal: true,
+      dataBeast: data,
+    });
   };
 
   hideModal = () => {
@@ -36,31 +38,14 @@ class App extends Component {
     this.setState({ searchString: "" });
   };
 
-  hornSelectHandler = (event) => {
-    this.setState({ filterHorns: event.target.value });
-  };
-
   render() {
-    let dataSet = dataBeasts;
-    if (this.state.filterHorns !== "all") {
-      dataSet = dataSet.filter(
-        (beast) => +this.state.filterHorns === beast.horns
-      );
-    }
-
-    dataSet = dataSet.filter((beast) =>
+    const dataSet = dataBeasts.filter((beast) =>
       beast.title.toLowerCase().includes(this.state.searchString.toLowerCase())
     );
 
     let dataOutput = <h3 className="text-center">No Horned Beasts Found</h3>;
     if (dataSet.length > 0) {
-      dataOutput = (
-        <Main
-          dataBeasts={dataSet}
-          showModal={this.showModal}
-          hornSelectHandler={this.hornSelectHandler}
-        />
-      );
+      dataOutput = <Main dataBeasts={dataSet} showModal={this.showModal} />;
     }
 
     return (

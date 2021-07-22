@@ -2,6 +2,8 @@ import { Component } from "react";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 
+import "./HornsFilter.css";
+
 class HornsFilter extends Component {
   render() {
     return (
