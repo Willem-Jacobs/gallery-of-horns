@@ -69,3 +69,19 @@ Start time: 1500 (3:00pm)
 Finished time: 1730 (5:30pm)
 Actual time needed to complete: 2.5 hours
 Note: Ran into some issues with state and updating so the process took longer to search.
+
+## LAB-04
+
+- Add ability to filter by the number of horns each beast has
+- Add select dropdown with the values available
+- Update the dataset used to render the beasts based on the filter
+- Created component to perform filter - HornFilter.js
+- Moved some state around to other components
+- Created component called Favorite.js to use on HornedBeast cards - Note this is a functional component and not a class component. Expects 2 a favoriteCounter value to be passed in and a callback function onClick that will udpate the state in the component using Favorite.js.
+
+Number and name of feature: #1 Task - Add ability to filter with a select element to display beasts with number of horns
+Estimate of time needed to complete: 1 hour
+Start time: Various times during the day
+Finished time: 1800 (6:00pm)
+Actual time needed to complete: 3.5 hours
+Note: Ran into some issues bootstrap versions had to research issue. Wanted to be sure that the favorites was not lost during filter change but found out this was not needed. Due to the limited ability of the app at this time, saving that information is not possible.
