@@ -1,9 +1,10 @@
 import { Component } from "react";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
-import Badge from "react-bootstrap/Badge";
+// import Badge from "react-bootstrap/Badge";
 
 import "./HornedBeast.css";
+import Favorite from "./Favorite";
 
 class HornedBeast extends Component {
   constructor(props) {
@@ -11,10 +12,10 @@ class HornedBeast extends Component {
     this.state = { favoriteCounter: 0 };
   }
 
-  favoriteClickHandler = () => {
-    this.setState((prevState) => {
-      return { favoriteCounter: prevState.favoriteCounter + 1 };
-    });
+  favoriteUpdateHandler = () => {
+    this.setState((prevState) => ({
+      favoriteCounter: prevState.favoriteCounter + 1,
+    }));
   };
 
   render() {
@@ -24,21 +25,17 @@ class HornedBeast extends Component {
           <Card.Img
             variant="top"
             src={this.props.imageUrl}
-            onClick={this.props.showModal}
+            onClick={() => this.props.showModal(this.state.favoriteCounter)}
           />
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
             <Card.Text>
               <p className="mb-0 pb-0">{this.props.description}</p>
-              <i
-                className="bi-suit-heart ml-2"
-                style={{ fontSize: "2rem", color: "red" }}
-                onClick={this.favoriteClickHandler}
-              >
-                <Badge className="ml-2" pill variant="info">
-                  {this.state.favoriteCounter ? this.state.favoriteCounter : ""}
-                </Badge>
-              </i>
+              <p>{`Horns: ${this.props.horns}`}</p>
+              <Favorite
+                onClick={this.favoriteUpdateHandler}
+                favoriteCounter={this.state.favoriteCounter}
+              />
             </Card.Text>
           </Card.Body>
         </Card>
