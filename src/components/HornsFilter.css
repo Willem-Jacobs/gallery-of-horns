@@ -1,0 +1,9 @@
+.form-floating {
+  width: 330px;
+  margin: auto;
+  text-align: center;
+}
+
+#hornFilter {
+  cursor: pointer;
+}

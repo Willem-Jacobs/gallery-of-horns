@@ -12,15 +12,22 @@ import Search from "./components/Search";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { showModal: false, dataBeast: {}, searchString: "" };
+    this.state = {
+      showModal: false,
+      dataBeast: {},
+      searchString: "",
+    };
   }
 
   showModal = (data) => {
-    this.setState({ showModal: true, dataBeast: data });
+    this.setState({
+      showModal: true,
+      dataBeast: data,
+    });
   };
 
   hideModal = () => {
-    this.setState({ showModal: false });
+    this.setState({ showModal: false, dataBeast: {} });
   };
 
   searchHandler = (event) => {
